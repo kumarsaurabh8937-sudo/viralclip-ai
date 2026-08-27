@@ -1,0 +1,16 @@
+{
+  "Rules": [
+    {
+      "ID": "DeleteOutputsAfter7Days",
+      "Status": "Enabled",
+      "Filter": { "Prefix": "outputs/" },
+      "Expiration": { "Days": 7 }
+    },
+    {
+      "ID": "DeleteInputsAfter2Days",
+      "Status": "Enabled",
+      "Filter": { "Prefix": "inputs/" },
+      "Expiration": { "Days": 2 }
+    }
+  ]
+}

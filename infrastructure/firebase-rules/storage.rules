@@ -1,0 +1,10 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // All direct client writes/reads to Firebase Storage are blocked.
+    // All video uploads go to Cloudflare R2 via the backend API (presigned URLs).
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
