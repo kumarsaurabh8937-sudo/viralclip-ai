@@ -1,9 +1,10 @@
-FROM python:3.11-slim
+FROM python:3.10-slim
 
-# System deps including FFmpeg
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
+    build-essential \
     ffmpeg \
-    libglib2.0-0 \
+    git \
     libsm6 \
     libxext6 \
     libxrender-dev \
@@ -15,16 +16,14 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip && \
+RUN pip install --no-cache-dir --upgrade pip setuptools && \
     pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
 RUN mkdir -p /tmp/viralclip
 
-# Pre-download Whisper model at build time (optional — speeds up cold start)
-ARG WHISPER_MODEL=base
-RUN python -c "import whisper; whisper.load_model('${WHISPER_MODEL}')" || true
+# Pre-download Whisper model at build time (optional - speeds up cold start)
+RUN python -c "import whisper; whisper.load_model('base')" || true
 
-EXPOSE 8000
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
