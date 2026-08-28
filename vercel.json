@@ -2,9 +2,6 @@
   "services": {
     "frontend": {
       "root": "frontend"
-    },
-    "backend": {
-      "root": "backend"
     }
   }
 }
