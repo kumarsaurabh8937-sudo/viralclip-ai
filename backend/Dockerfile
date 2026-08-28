@@ -18,13 +18,13 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Pre-install pip build tools to prevent 'getting requirements to build wheel' errors
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel setuptools-rust
+RUN pip install --no-cache-dir --upgrade pip "setuptools<70.0.0" wheel setuptools-rust
 
 # Install PyTorch CPU first (keeps image small, prevents Render OOM)
 RUN pip install --no-cache-dir torch==2.3.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cpu
 
 # Install the rest of the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --no-build-isolation -r requirements.txt
 
 COPY . .
 
