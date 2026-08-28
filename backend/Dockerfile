@@ -23,7 +23,7 @@ COPY . .
 RUN mkdir -p /tmp/viralclip
 
 # Pre-download Whisper model at build time (optional — speeds up cold start)
-ARG WHISPER_MODEL=medium
+ARG WHISPER_MODEL=base
 RUN python -c "import whisper; whisper.load_model('${WHISPER_MODEL}')" || true
 
 EXPOSE 8000
