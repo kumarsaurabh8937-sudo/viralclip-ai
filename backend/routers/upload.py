@@ -12,8 +12,6 @@ Handles:
 - Firestore job document creation
 """
 
-from __future__ import annotations
-
 import logging
 import os
 import uuid
