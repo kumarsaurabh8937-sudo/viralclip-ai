@@ -62,7 +62,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     <Sparkles size={18} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-text-primary">Welcome to ViralClip AI</h3>
+                    <h3 className="font-bold text-text-primary">Welcome to KlipShort AI</h3>
                     <p className="text-text-muted text-xs">Get 3 free credits — no card required</p>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-# ViralClip AI 🎬
+# KlipShort AI 🎬
 
 > **AI-powered web app that converts long videos into viral 9:16 Shorts in seconds.**
 >
@@ -173,7 +173,7 @@ Step 4  Face-Tracking 9:16 Crop  → MediaPipe face detection → FFmpeg crop fi
 Step 5  Dynamic Zoom             → FFmpeg zoompan on HIGH_ENERGY_WORDS timestamps
 Step 6  Caption Rendering        → FFmpeg drawtext + context-aware animated emojis
 Step 7  Music Balancing          → FFmpeg amix with 15% duck on background music
-Step 8  Watermark (free users)   → FFmpeg drawtext bottom-right "ViralClip AI"
+Step 8  Watermark (free users)   → FFmpeg drawtext bottom-right "KlipShort AI"
 Step 9  Upload to R2 + Firestore → presigned download URL, 7-day expiry set
 ```
 
@@ -352,7 +352,7 @@ Drop `.mp3` or `.wav` royalty-free music files into `backend/assets/music/`. The
 | `ADMIN_SECRET` | Secret for admin endpoints |
 | `ALLOWED_ORIGINS` | Comma-separated CORS origins |
 | `WHISPER_MODEL` | Whisper model size (`tiny`/`base`/`medium`/`large`) |
-| `WATERMARK_TEXT` | Watermark text (default: `ViralClip AI`) |
+| `WATERMARK_TEXT` | Watermark text (default: `KlipShort AI`) |
 | `FREE_TRIAL_CREDITS` | Free credits for new users (default: `3`) |
 | `VIDEO_EXPIRY_DAYS` | Days before auto-delete (default: `7`) |
 

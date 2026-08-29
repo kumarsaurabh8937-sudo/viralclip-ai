@@ -6,11 +6,11 @@ import { Toaster } from 'react-hot-toast';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ViralClip AI — Turn Videos into Viral Shorts',
+  title: 'KlipShort AI — Turn Videos into Viral Shorts',
   description: 'AI-powered tool that converts long videos into viral 9:16 shorts with smart face-tracking, Hinglish captions, dynamic zoom, and background music balancing.',
   keywords: ['AI shorts', 'video editor', 'Hinglish captions', 'viral video', 'reels creator'],
   openGraph: {
-    title: 'ViralClip AI',
+    title: 'KlipShort AI',
     description: 'Convert long videos into viral AI-powered 9:16 shorts',
     type: 'website',
   },

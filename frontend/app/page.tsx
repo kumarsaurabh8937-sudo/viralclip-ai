@@ -85,7 +85,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold text-lg">
             <span className="text-2xl">🎬</span>
-            <span className="text-gradient-purple-blue">ViralClip AI</span>
+            <span className="text-gradient-purple-blue">KlipShort AI</span>
           </Link>
 
           <div className="flex items-center gap-3">
